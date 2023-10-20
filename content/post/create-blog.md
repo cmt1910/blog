@@ -1,7 +1,7 @@
 +++
 title = 'ブログを作りました'
 date = 2023-10-20T17:44:48+09:00
-draft = true
+draft = false
 +++
 
 HugoとGitHub Pagesでブログを作りました。
