@@ -2,4 +2,3 @@ baseURL = 'http://cmt1910.github.io/blog'
 languageCode = 'ja'
 title = 'ちょこみんとの雑記帳'
 theme = "PaperMod"
-defaultTheme: auto # ブラウザのテーマに合わせてダークとライトを切り替える
