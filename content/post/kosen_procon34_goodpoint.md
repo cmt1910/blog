@@ -1,7 +1,7 @@
 +++
 title = '高専プロコンで採用してよかった技術・やってよかったこと'
 date = 2023-12-22T08:53:40+09:00
-draft = true
+draft = false
 +++
 
 この記事は[みすてむず いず みすきーしすてむず (4) Advent Calendar 2023](https://adventar.org/calendars/8652) 24日目の記事です。
