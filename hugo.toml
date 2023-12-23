@@ -21,6 +21,6 @@ url = "https://github.com/cmt1910"
 
 [params.assets]
 favicon = "/blog/android-chrome-192x192.png"
-favicon16x16 = "/blog/favicon16x16.png"
-favicon32x32 = "/blog/favicon32x32.png"
+favicon16x16 = "/blog/favicon-16x16.png"
+favicon32x32 = "/blog/favicon-32x32.png"
 apple_touch_icon = "/blog/apple_touch_icon.png"
