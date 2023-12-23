@@ -1,12 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ちょこみんとの雑記帳</title><link>https://cmt1910.github.io/blog/</link><description>Recent content on ちょこみんとの雑記帳</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Fri, 22 Dec 2023 22:10:25 +0900</lastBuildDate><atom:link href="https://cmt1910.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Reel 2024</title><link>https://cmt1910.github.io/blog/post/reel_2024/</link><pubDate>Fri, 22 Dec 2023 22:10:25 +0900</pubDate><guid>https://cmt1910.github.io/blog/post/reel_2024/</guid><description>こんにちは。ちょこみんとです。2023年ももう終わってしまいますね。 2023年に作った中でもお気に入りの作品たちをここにまとめておきます。
-プログラミング @MomentEffect.anm AviUtlで利用可能なLuaスクリプトです。50行にも満たないスクリプトですが、かゆいところにてが届くスクリプトだったようでTwitterで200いいねをいただきました。うれしい。
-GitHubからダウンロードできます。
-ColorLens 全国高等専門学校プログラミングコンテスト 第34回福井大会（2023）本選出場作品です。 Flutterを使用し、制作しました。
-ColorChat ChatGPT APIを利用し、自然言語から配色を生成するソフトウェアです。 モデルやリクエストパラメータを自由に設定できる高いカスタマイズ性を備えています。
-BOOTHで販売しています。
-映像 電算機部文字アニメ 学園祭前日になにか展示したいな～と思い、3時間ほどで作った文字アニメです。 かわいくできてお気に入りです。
-エラーコード 二次創作PV エラーコードの二次創作PVです。
-はじめて映像に触れてから長い事たちますが、この作品でようやくキネポのコツを掴めた気がします。</description></item><item><title>高専プロコンで採用してよかった技術・やってよかったこと</title><link>https://cmt1910.github.io/blog/post/kosen_procon34_goodpoint/</link><pubDate>Fri, 22 Dec 2023 08:53:40 +0900</pubDate><guid>https://cmt1910.github.io/blog/post/kosen_procon34_goodpoint/</guid><description>この記事はみすてむず いず みすきーしすてむず (4) Advent Calendar 2023 24日目の記事です。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ちょこみんとの雑記帳</title><link>https://cmt1910.github.io/blog/</link><description>Recent content on ちょこみんとの雑記帳</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 24 Dec 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://cmt1910.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>高専プロコンで採用してよかった技術・やってよかったこと</title><link>https://cmt1910.github.io/blog/post/kosen_procon34_goodpoint/</link><pubDate>Sun, 24 Dec 2023 00:00:00 +0900</pubDate><guid>https://cmt1910.github.io/blog/post/kosen_procon34_goodpoint/</guid><description>この記事はみすてむず いず みすきーしすてむず (4) Advent Calendar 2023 24日目の記事です。
 こんにちは。ちょこみんとです。10月に第34回高専プロコン　自由部門の本選に出場してきました。 自分のチームは、C言語以外の経験がほとんどない3人チームで、制作期間も3か月しかありませんでした。 そのときに採用してよかった技術や、やってよかったことを紹介します。
 Git/GitHub メンバー全員がGit/GitHubの使用経験がなく、開発初期はDiscordに.dartファイルを貼り付けて共有していました。 しかし、管理するファイルが増えすぐに苦しくなったため、Git/GitHubを用いたバージョン管理を導入しました。
 導入には苦労するかと思いきや、案外1週間かからずに導入できました。 開発終了後も個人開発のプロジェクトでGit/GitHubを活用でき、プロジェクトの管理が以前より楽になったため、 この機会に導入して本当によかったと思っています。
@@ -18,6 +10,14 @@ Flutterを採用して良かったこととして、以下の点が挙げられ�
 Material Design 3 アプリケーションのデザインには、Material Design 3を採用しました。 開発期間にまったく余裕が無かったため、既存のデザイン言語を利用でき、1から考える必要がない点は大きなメリットでした。
 開発を始めた時点では、FlutterのデフォルトはMaterial Design 2でしたが、 Material Design 3のほうが好みだったため、Material Design 3を採用してみました。 情報が少なく苦労しましたが、会場で「市販されているアプリみたい」などと、 デザインを褒めていただける機会が多く、採用した甲斐があったと思っています。
 まとめ 以上、高専プロコンで採用してよかった技術/やってよかったことを紹介しました。 アプリ開発にハマるきっかけになってもらったり、これまで自分の作ったものを評価してもらう機会のなかった メンバーに機会を与えられたり、高専プロコンそのものも出場してよかったと思います。
-ありがとうございました。</description></item><item><title>ブログを作りました</title><link>https://cmt1910.github.io/blog/post/create-blog/</link><pubDate>Fri, 20 Oct 2023 17:44:48 +0900</pubDate><guid>https://cmt1910.github.io/blog/post/create-blog/</guid><description>HugoとGitHub Pagesでブログを作りました。 markdownファイルをpushするとGitHub Actionsで自動でデプロイされるようになっています。
+ありがとうございました。</description></item><item><title>Reel 2024</title><link>https://cmt1910.github.io/blog/post/reel_2024/</link><pubDate>Fri, 22 Dec 2023 22:10:25 +0900</pubDate><guid>https://cmt1910.github.io/blog/post/reel_2024/</guid><description>こんにちは。ちょこみんとです。2023年ももう終わってしまいますね。 2023年に作った中でもお気に入りの作品たちをここにまとめておきます。
+プログラミング @MomentEffect.anm AviUtlで利用可能なLuaスクリプトです。50行にも満たないスクリプトですが、かゆいところにてが届くスクリプトだったようでTwitterで200いいねをいただきました。うれしい。
+GitHubからダウンロードできます。
+ColorLens 全国高等専門学校プログラミングコンテスト 第34回福井大会（2023）本選出場作品です。 Flutterを使用し、制作しました。
+ColorChat ChatGPT APIを利用し、自然言語から配色を生成するソフトウェアです。 モデルやリクエストパラメータを自由に設定できる高いカスタマイズ性を備えています。
+BOOTHで販売しています。
+映像 電算機部文字アニメ 学園祭前日になにか展示したいな～と思い、3時間ほどで作った文字アニメです。 かわいくできてお気に入りです。
+エラーコード 二次創作PV エラーコードの二次創作PVです。
+はじめて映像に触れてから長い事たちますが、この作品でようやくキネポのコツを掴めた気がします。</description></item><item><title>ブログを作りました</title><link>https://cmt1910.github.io/blog/post/create-blog/</link><pubDate>Fri, 20 Oct 2023 17:44:48 +0900</pubDate><guid>https://cmt1910.github.io/blog/post/create-blog/</guid><description>HugoとGitHub Pagesでブログを作りました。 markdownファイルをpushするとGitHub Actionsで自動でデプロイされるようになっています。
 適当に色々書いてく予定です。 よろしくお願いします。
 参考文献 HugoとGitHub Pagesを使ったお手軽サイト構築 Hugo と Github Pages でブログを作る</description></item></channel></rss>
