@@ -18,3 +18,9 @@ url = "https://twitter.com/cmt1910"
 [[params.socialIcons]]
 name = "github"
 url = "https://github.com/cmt1910"
+
+[params.assets]
+favicon = "/blog/android-chrome-512x512.png"
+favicon16x16 = "/blog/favicon16x16.png"
+favicon32x32 = "/blog/favicon32x32.png"
+apple_touch_icon = "/blog/apple_touch_icon.png"
