@@ -9,10 +9,10 @@ ShowBreadCrumbs = true
 
 [params.homeInfoParams]
 Title = "ちょこみんと"
-Content = "ゲームや映像、デザインを作っています"
+Content = "ソフトウェアや、デザインを作っています"
 
 [[params.socialIcons]]
-name = "twitter"
+name = "x"
 url = "https://twitter.com/cmt1910"
 
 [[params.socialIcons]]
