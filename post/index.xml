@@ -1,75 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on ちょこみんとの雑記帳</title><link>https://cmt1910.github.io/blog/post/</link><description>Recent content in Posts on ちょこみんとの雑記帳</description><generator>Hugo -- 0.139.3</generator><language>ja</language><lastBuildDate>Sun, 24 Dec 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://cmt1910.github.io/blog/post/index.xml" rel="self" type="application/rss+xml"/><item><title>高専プロコンで採用してよかった技術・やってよかったこと</title><link>https://cmt1910.github.io/blog/post/kosen_procon34_goodpoint/</link><pubDate>Sun, 24 Dec 2023 00:00:00 +0900</pubDate><guid>https://cmt1910.github.io/blog/post/kosen_procon34_goodpoint/</guid><description>&lt;p>この記事は&lt;a href="https://adventar.org/calendars/8652">みすてむず いず みすきーしすてむず (4) Advent Calendar 2023&lt;/a> 24日目の記事です。&lt;/p>
-&lt;p>こんにちは。ちょこみんとです。10月に第34回高専プロコン　自由部門の本選に出場してきました。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on ちょこみんとの雑記帳</title><link>https://cmt1910.github.io/blog/post/</link><description>Recent content in Posts on ちょこみんとの雑記帳</description><generator>Hugo -- 0.152.2</generator><language>ja</language><lastBuildDate>Sun, 24 Dec 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://cmt1910.github.io/blog/post/index.xml" rel="self" type="application/rss+xml"/><item><title>高専プロコンで採用してよかった技術・やってよかったこと</title><link>https://cmt1910.github.io/blog/post/kosen_procon34_goodpoint/</link><pubDate>Sun, 24 Dec 2023 00:00:00 +0900</pubDate><guid>https://cmt1910.github.io/blog/post/kosen_procon34_goodpoint/</guid><description>&lt;p&gt;この記事は&lt;a href="https://adventar.org/calendars/8652"&gt;みすてむず いず みすきーしすてむず (4) Advent Calendar 2023&lt;/a&gt; 24日目の記事です。&lt;/p&gt;
+&lt;p&gt;こんにちは。ちょこみんとです。10月に第34回高専プロコン　自由部門の本選に出場してきました。
 自分のチームは、C言語以外の経験がほとんどない3人チームで、制作期間も3か月しかありませんでした。
-そのときに採用してよかった技術や、やってよかったことを紹介します。&lt;/p>
-&lt;h2 id="gitgithub">Git/GitHub&lt;/h2>
-&lt;p>メンバー全員がGit/GitHubの使用経験がなく、開発初期はDiscordに.dartファイルを貼り付けて共有していました。
-しかし、管理するファイルが増えすぐに苦しくなったのでGit/GitHubを用いたバージョン管理を導入しました。&lt;/p>
-&lt;p>導入には苦労するかと思いきや、案外1週間かからずに導入できました。
+そのときに採用してよかった技術や、やってよかったことを紹介します。&lt;/p&gt;
+&lt;h2 id="gitgithub"&gt;Git/GitHub&lt;/h2&gt;
+&lt;p&gt;メンバー全員がGit/GitHubの使用経験がなく、開発初期はDiscordに.dartファイルを貼り付けて共有していました。
+しかし、管理するファイルが増えすぐに苦しくなったのでGit/GitHubを用いたバージョン管理を導入しました。&lt;/p&gt;
+&lt;p&gt;導入には苦労するかと思いきや、案外1週間かからずに導入できました。
 開発終了後も個人開発のプロジェクトでGit/GitHubを活用でき、プロジェクトの管理が以前より楽になったので
-この機会に導入して本当によかったと思っています。&lt;/p>
-&lt;h2 id="discordにpushの通知を送る">Discordにpushの通知を送る&lt;/h2>
-&lt;p>Git/GitHubを導入した後、webhookで開発チームのDiscordサーバーにpushの通知を送るように
+この機会に導入して本当によかったと思っています。&lt;/p&gt;
+&lt;h2 id="discordにpushの通知を送る"&gt;Discordにpushの通知を送る&lt;/h2&gt;
+&lt;p&gt;Git/GitHubを導入した後、webhookで開発チームのDiscordサーバーにpushの通知を送るように
 しました。やる気が出ない期間でも、他のメンバーのpush通知をみて自分もやらなきゃと
 焦ることができたり、同様に他のメンバーにも焦ってもらえたので、
-開発のモチベーション維持に非常に役立ちました。&lt;/p>
-&lt;h2 id="flutterdart">Flutter/Dart&lt;/h2>
-&lt;p>アプリケーションの制作にはFlutter/Dartを採用しました。
-&lt;a href="https://flutter.dev/">Flutter&lt;/a>はGoogleが開発しているクロスプラットフォームのモバイルアプリ開発フレームワークです。
-テーマが確定する前からFlutterの学習を始めたので最悪テーマが変更になっても流用できる技術がいいなと思い、Flutterを採用しました。&lt;/p>
-&lt;p>Flutterを採用して良かったこととして、以下の点が挙げられます。&lt;/p>
-&lt;ul>
-&lt;li>日本語でも情報が多く、学習しやすい&lt;/li>
-&lt;li>標準でMaterial Designに準拠しているので自分でデザインを考える必要がない&lt;/li>
-&lt;li>簡単にiOSとAndroidの両方に対応できた&lt;/li>
-&lt;li>GUIのプログラミングがたのしい&lt;/li>
-&lt;/ul>
-&lt;p>はじめてのオブジェクト指向に苦労しましたが、Flutter/Dartが比較的流行っている(気がする)ので
-情報が多く、学習しやすかったのは非常に助かりました。&lt;/p>
-&lt;p>また、これまでにさほどプログラミングに関心のなかった開発メンバーがGUIのプログラミングにはじめて触れ、
+開発のモチベーション維持に非常に役立ちました。&lt;/p&gt;
+&lt;h2 id="flutterdart"&gt;Flutter/Dart&lt;/h2&gt;
+&lt;p&gt;アプリケーションの制作にはFlutter/Dartを採用しました。
+&lt;a href="https://flutter.dev/"&gt;Flutter&lt;/a&gt;はGoogleが開発しているクロスプラットフォームのモバイルアプリ開発フレームワークです。
+テーマが確定する前からFlutterの学習を始めたので最悪テーマが変更になっても流用できる技術がいいなと思い、Flutterを採用しました。&lt;/p&gt;
+&lt;p&gt;Flutterを採用して良かったこととして、以下の点が挙げられます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;日本語でも情報が多く、学習しやすい&lt;/li&gt;
+&lt;li&gt;標準でMaterial Designに準拠しているので自分でデザインを考える必要がない&lt;/li&gt;
+&lt;li&gt;簡単にiOSとAndroidの両方に対応できた&lt;/li&gt;
+&lt;li&gt;GUIのプログラミングがたのしい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;はじめてのオブジェクト指向に苦労しましたが、Flutter/Dartが比較的流行っている(気がする)ので
+情報が多く、学習しやすかったのは非常に助かりました。&lt;/p&gt;
+&lt;p&gt;また、これまでにさほどプログラミングに関心のなかった開発メンバーがGUIのプログラミングにはじめて触れ、
 その楽しさを知り、アプリケーションエンジニアを目指すようになりました。
-自分が直接何かをしたわけではありませんが、素直に嬉しかったです。&lt;/p>
-&lt;h2 id="material-design-3">Material Design 3&lt;/h2>
-&lt;p>アプリケーションのデザインには、&lt;a href="https://material.io/design">Material Design 3&lt;/a>を採用しました。
-開発期間にまったく余裕が無かったので既存のデザイン言語を利用でき、1から考える必要がない点は大きなメリットでした。&lt;/p>
-&lt;p>開発を始めた時点ではFlutterのデフォルトはMaterial Design 2でしたが、
+自分が直接何かをしたわけではありませんが、素直に嬉しかったです。&lt;/p&gt;
+&lt;h2 id="material-design-3"&gt;Material Design 3&lt;/h2&gt;
+&lt;p&gt;アプリケーションのデザインには、&lt;a href="https://material.io/design"&gt;Material Design 3&lt;/a&gt;を採用しました。
+開発期間にまったく余裕が無かったので既存のデザイン言語を利用でき、1から考える必要がない点は大きなメリットでした。&lt;/p&gt;
+&lt;p&gt;開発を始めた時点ではFlutterのデフォルトはMaterial Design 2でしたが、
 Material Design 3のほうが好みだったのでMaterial Design 3を採用してみました。
 情報が少なく苦労しましたが、会場で「市販されているアプリみたい」などと、
-デザインを褒めていただける機会が多く、採用した甲斐があったと思っています。&lt;/p>
-&lt;h2 id="まとめ">まとめ&lt;/h2>
-&lt;p>以上、高専プロコンで採用してよかった技術/やってよかったことを紹介しました。
+デザインを褒めていただける機会が多く、採用した甲斐があったと思っています。&lt;/p&gt;
+&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;以上、高専プロコンで採用してよかった技術/やってよかったことを紹介しました。
 アプリ開発にハマるきっかけになってもらったり、これまで自分の作ったものを評価してもらう機会のなかった
-メンバーに機会を与えられたり、高専プロコンそのものも出場してよかったと思います。&lt;/p>
-&lt;p>ありがとうございました。&lt;/p></description></item><item><title>Reel 2024</title><link>https://cmt1910.github.io/blog/post/reel_2024/</link><pubDate>Fri, 22 Dec 2023 22:10:25 +0900</pubDate><guid>https://cmt1910.github.io/blog/post/reel_2024/</guid><description>&lt;p>こんにちは。ちょこみんとです。2023年ももう終わってしまいますね。
-2023年に作った中でもお気に入りの作品たちをここにまとめておきます。&lt;/p>
-&lt;h2 id="プログラミング">プログラミング&lt;/h2>
-&lt;h3 id="momenteffectanm">@MomentEffect.anm&lt;/h3>
-&lt;p>&lt;img alt="電算機部文字アニメ" loading="lazy" src="https://cmt1910.github.io/blog/blog/images/moment_effect.gif">&lt;/p>
-&lt;p>AviUtlで利用可能なLuaスクリプトです。50行にも満たないスクリプトですが、かゆいところにてが届くスクリプトだったようでTwitterで200いいねをいただきました。うれしい。&lt;/p>
-&lt;p>&lt;a href="https://github.com/cmt1910/MomentEffect">GitHub&lt;/a>からダウンロードできます。&lt;/p>
-&lt;h3 id="colorlens">ColorLens&lt;/h3>
-&lt;p>&lt;img alt="エラーコード 二次創作PV" loading="lazy" src="https://cmt1910.github.io/blog/blog/images/colorlens_textlogo.png">&lt;/p>
-&lt;p>全国高等専門学校プログラミングコンテスト 第34回福井大会（2023）本選出場作品です。
-Flutterを使用し、制作しました。&lt;/p>
-&lt;h3 id="colorchat">ColorChat&lt;/h3>
-&lt;p>&lt;img alt="ColorChat" loading="lazy" src="https://cmt1910.github.io/blog/blog/images/colorchat_thumbnail.png">&lt;/p>
-&lt;p>ChatGPT APIを利用し、自然言語から配色を生成するソフトウェアです。
-モデルやリクエストパラメータを自由に設定できる高いカスタマイズ性を備えています。&lt;/p>
-&lt;p>&lt;a href="https://booth.pm/ja/items/5290308">BOOTH&lt;/a>で販売しています。&lt;/p>
-&lt;h2 id="映像">映像&lt;/h2>
-&lt;h3 id="電算機部文字アニメ">電算機部文字アニメ&lt;/h3>
-&lt;p>&lt;img alt="電算機部文字アニメ" loading="lazy" src="https://cmt1910.github.io/blog/blog/images/densan_anime.gif">&lt;/p>
-&lt;p>学園祭前日になにか展示したいな～と思い、3時間ほどで作った文字アニメです。
-かわいくできてお気に入りです。&lt;/p>
-&lt;h3 id="エラーコード-二次創作pv">エラーコード 二次創作PV&lt;/h3>
-&lt;p>&lt;img alt="エラーコード 二次創作PV" loading="lazy" src="https://cmt1910.github.io/blog/blog/images/errorcode.gif">&lt;/p>
-&lt;p>&lt;a href="https://youtu.be/Ohxod1nuqvA">エラーコード&lt;/a>の二次創作PVです。&lt;/p>
-&lt;p>はじめて映像に触れてから長い事たちますが、この作品でようやくキネポのコツを掴めた気がします。&lt;/p></description></item><item><title>ブログを作りました</title><link>https://cmt1910.github.io/blog/post/create-blog/</link><pubDate>Fri, 20 Oct 2023 17:44:48 +0900</pubDate><guid>https://cmt1910.github.io/blog/post/create-blog/</guid><description>&lt;p>HugoとGitHub Pagesでブログを作りました。
-markdownファイルをpushするとGitHub Actionsで自動でデプロイされるようになっています。&lt;/p>
-&lt;p>適当に色々書いてく予定です。
-よろしくお願いします。&lt;/p>
-&lt;h2 id="参考文献">参考文献&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://koyomiji.com/log/72">HugoとGitHub Pagesを使ったお手軽サイト構築&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://sat8bit.github.io/posts/hugo-with-github-pages/">Hugo と Github Pages でブログを作る&lt;/a>&lt;/li>
-&lt;/ul></description></item></channel></rss>
+メンバーに機会を与えられたり、高専プロコンそのものも出場してよかったと思います。&lt;/p&gt;
+&lt;p&gt;ありがとうございました。&lt;/p&gt;</description></item><item><title>Reel 2024</title><link>https://cmt1910.github.io/blog/post/reel_2024/</link><pubDate>Fri, 22 Dec 2023 22:10:25 +0900</pubDate><guid>https://cmt1910.github.io/blog/post/reel_2024/</guid><description>&lt;p&gt;こんにちは。ちょこみんとです。2023年ももう終わってしまいますね。
+2023年に作った中でもお気に入りの作品たちをここにまとめておきます。&lt;/p&gt;
+&lt;h2 id="プログラミング"&gt;プログラミング&lt;/h2&gt;
+&lt;h3 id="momenteffectanm"&gt;@MomentEffect.anm&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="電算機部文字アニメ" loading="lazy" src="https://cmt1910.github.io/blog/images/moment_effect.gif"&gt;&lt;/p&gt;
+&lt;p&gt;AviUtlで利用可能なLuaスクリプトです。50行にも満たないスクリプトですが、かゆいところにてが届くスクリプトだったようでTwitterで200いいねをいただきました。うれしい。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/cmt1910/MomentEffect"&gt;GitHub&lt;/a&gt;からダウンロードできます。&lt;/p&gt;
+&lt;h3 id="colorlens"&gt;ColorLens&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="エラーコード 二次創作PV" loading="lazy" src="https://cmt1910.github.io/blog/images/colorlens_textlogo.png"&gt;&lt;/p&gt;
+&lt;p&gt;全国高等専門学校プログラミングコンテスト 第34回福井大会（2023）本選出場作品です。
+Flutterを使用し、制作しました。&lt;/p&gt;
+&lt;h3 id="colorchat"&gt;ColorChat&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="ColorChat" loading="lazy" src="https://cmt1910.github.io/blog/images/colorchat_thumbnail.png"&gt;&lt;/p&gt;
+&lt;p&gt;ChatGPT APIを利用し、自然言語から配色を生成するソフトウェアです。
+モデルやリクエストパラメータを自由に設定できる高いカスタマイズ性を備えています。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://booth.pm/ja/items/5290308"&gt;BOOTH&lt;/a&gt;で販売しています。&lt;/p&gt;
+&lt;h2 id="映像"&gt;映像&lt;/h2&gt;
+&lt;h3 id="電算機部文字アニメ"&gt;電算機部文字アニメ&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="電算機部文字アニメ" loading="lazy" src="https://cmt1910.github.io/blog/images/densan_anime.gif"&gt;&lt;/p&gt;
+&lt;p&gt;学園祭前日になにか展示したいな～と思い、3時間ほどで作った文字アニメです。
+かわいくできてお気に入りです。&lt;/p&gt;
+&lt;h3 id="エラーコード-二次創作pv"&gt;エラーコード 二次創作PV&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="エラーコード 二次創作PV" loading="lazy" src="https://cmt1910.github.io/blog/images/errorcode.gif"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://youtu.be/Ohxod1nuqvA"&gt;エラーコード&lt;/a&gt;の二次創作PVです。&lt;/p&gt;
+&lt;p&gt;はじめて映像に触れてから長い事たちますが、この作品でようやくキネポのコツを掴めた気がします。&lt;/p&gt;</description></item><item><title>ブログを作りました</title><link>https://cmt1910.github.io/blog/post/create-blog/</link><pubDate>Fri, 20 Oct 2023 17:44:48 +0900</pubDate><guid>https://cmt1910.github.io/blog/post/create-blog/</guid><description>&lt;p&gt;HugoとGitHub Pagesでブログを作りました。
+markdownファイルをpushするとGitHub Actionsで自動でデプロイされるようになっています。&lt;/p&gt;
+&lt;p&gt;適当に色々書いてく予定です。
+よろしくお願いします。&lt;/p&gt;
+&lt;h2 id="参考文献"&gt;参考文献&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://koyomiji.com/log/72"&gt;HugoとGitHub Pagesを使ったお手軽サイト構築&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://sat8bit.github.io/posts/hugo-with-github-pages/"&gt;Hugo と Github Pages でブログを作る&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
