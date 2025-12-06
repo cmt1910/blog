@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.121.1"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.152.2"><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -10,16 +10,17 @@
 
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="http://cmt1910.github.io/blog/">
-<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.e087fd1dc76e73a35ae6d7028ddc1ba41e0131e7f9b3a6e2d019a208e6d6c4b5.css" integrity="sha256-4If9Hcduc6Na5tcCjdwbpB4BMef5s6bi0BmiCObWxLU=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://cmt1910.github.io/blog/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://cmt1910.github.io/blog/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://cmt1910.github.io/blog/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://cmt1910.github.io/blog/apple-touch-icon.png">
-<link rel="mask-icon" href="http://cmt1910.github.io/blog/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/blog/">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://cmt1910.github.io/blog/index.xml">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/">
 <noscript>
     <style>
         #theme-toggle,
@@ -37,67 +38,70 @@
                 --secondary: rgb(155, 156, 157);
                 --tertiary: rgb(65, 66, 68);
                 --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
+                --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
+            .toc {
+                background: var(--entry);
             }
+        }
 
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
             }
         }
 
     </style>
-</noscript><meta property="og:title" content="ちょこみんとの雑記帳" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://cmt1910.github.io/blog/" />
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ちょこみんとの雑記帳"/>
-<meta name="twitter:description" content=""/>
+</script><meta property="og:url" content="http://localhost:1313/blog/">
+  <meta property="og:site_name" content="ちょこみんとの雑記帳">
+  <meta property="og:title" content="ちょこみんとの雑記帳">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ちょこみんとの雑記帳">
+<meta name="twitter:description" content="">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "ちょこみんとの雑記帳",
-  "url": "http://cmt1910.github.io/blog",
+  "url": "http://localhost:1313/blog/",
   "description": "",
-  "thumbnailUrl": "http://cmt1910.github.io/blog/favicon.ico",
+  "logo": "http://localhost:1313/blog/android-chrome-192x192.png",
   "sameAs": [
       "https://twitter.com/cmt1910", "https://github.com/cmt1910"
   ]
 }
 </script>
 </head>
-
 <body class="list" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
+    <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://cmt1910.github.io/blog" accesskey="h" title="ちょこみんとの雑記帳 (Alt + H)">ちょこみんとの雑記帳</a>
+            <a href="http://localhost:1313/blog/" accesskey="h" title="ちょこみんとの雑記帳 (Alt + H)">ちょこみんとの雑記帳</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -129,16 +133,15 @@
         <h1>ちょこみんと</h1>
     </header>
     <div class="entry-content">
-        ゲームや映像、デザインを作っています
+        ソフトウェアや、デザインを作っています
     </div>
     <footer class="entry-footer">
         <div class="social-icons" >
     <a href="https://twitter.com/cmt1910" target="_blank" rel="noopener noreferrer me"
-        title="Twitter">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
+        title="X">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
     <path
-        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
     </path>
 </svg>
     </a>
@@ -158,6 +161,83 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">ターミナルとかCLIツールをいい感じにした
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+2年ぶりにこんにちは。ちょこみんとです。
+最近はターミナルから利用するAI Agentが流行りです。おかげで近頃ターミナルを利用する時間が増え、 適当にやっていたターミナルとCLIツールをいい感じに整備したいな～と思うようになりました。 というわけで、いい感じに整備した記録を忘れないように書いておきます。
+※最近はmacで開発を行っているので記事の内容はmacOS向けです。
+開発ツールの管理をmiseに移行した これまでFlutterのバージョン管理はfvm、Node.jsはnvmを利用してバージョン管理をしていました。 使う言語やツールが増えるたびにバージョン管理ツールも増えるのがめんどくさいよ～と思っていたところにmise(ミーズ)というツールがあることを知りました。 miseを利用することで、言語のバージョン管理、環境変数の管理、タスクランナー3役をmiseのみで完結させることが出来ます。
+fvm、nvmなどを介さずにasdf（あるいはnvmやpyenvなど、ただしあらゆるプログラミング言語に対応）と同様に、 node.js、Python、CMake、Terraformなどの開発ツールや、数百種類にも及ぶその他のツールを管理します。 direnvと同様に、異なるプロジェクトディレクトリごとに環境変数を管理します。 makeと同様に、プロジェクトのビルドやテストに使用するタスクを管理します。 (miseのREADMEより)
+というわけで、fvmとnvmをアンインストールして全部miseでバージョン管理するようにしました。
+ターミナルをGhosttyにした これがそもそもの開発環境を整備しようとした一番の原因になります。 いままでターミナルはWarpを利用していましたが、
+Codex CLIで変換を確定した際にプロンプトが送信されてしまう 気がついたらWarpにいろんな機能が増えてIDEみたいになってしまった ということがあり、ターミナルを変えることにしました。 候補としてはAlacrittyやWezTermなどがあったのですが、
+プラットフォームのネイティブのUI Unicodeまわりの対応を頑張っているらしい なんか新しくてよさそう Mitchell Hashimoto氏のポスト という3点でWarpからGhosttyに移行することにしました。 WarpとmacOS標準のターミナル以外を使ったことがないのでぶっちゃけ違いはわかりませんが、GhosttyではIME周りの問題が発生していないのでいい感じな気がしています。
+.zshrcを整備した 上に書いたように、ターミナルはこれまでWarpを利用していたのですがWarpは設定しなくても色々よしなにやってくれることがウリでした。 しかし、Ghosttyに移行したことで設定や挙動のカスタマイズは自分でやる必要があります。 これを機に、雰囲気で書きすぎていて設定が意味不明だった.zshrcをちゃんと書くことにしました。 具体的には、
+プラグインをsheldonで管理するようにする プラグインを入れる romkatv/powerlevel10k zdharma-continuum/fast-syntax-highlighting zsh-users/zsh-autosuggestions 補完や履歴の設定をちゃんと書く ということをやりました。 詳しい設定は後に書くdotfilesのリポジトリをご覧ください。
+dotfilesを始めた これまでCLIツールの設定ファイルがどこに格納されているか設定を変更するたびにドキュメントをみて探していたのですが、
+これでは流石に効率が悪すぎる 会社のPCでも同じ設定を使いたい という思いがあり、重い腰を上げてdotfilesで各種設定ファイルを書くことにしました。 dotfilesの管理にはchezmoiを利用しています。 詳しい設定はdotfilesのリポジトリをご覧ください。
+成果 というわけでターミナルとかCLIツールをいい感じに整備したわけですが、整備した甲斐あってこれまで雰囲気で書いていた設定の意味を理解できるようになったり、 入れるだけ入れて眠っていたCLIツールを活用できるようになったりと色々いいことがあったのでやってよかったな～と思います。 気が向いたら.zshrcとdotfilesについても詳しく記事を書こうと思います。気が向いたら。
+ではまたいつか会いましょう。ちょこみんとでした。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-06 16:09:56 +0900 JST'>December 6, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to ターミナルとかCLIツールをいい感じにした" href="http://localhost:1313/blog/post/improve-cli-and-terminal/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">高専プロコンで採用してよかった技術・やってよかったこと
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>この記事はみすてむず いず みすきーしすてむず (4) Advent Calendar 2023 24日目の記事です。
+こんにちは。ちょこみんとです。10月に第34回高専プロコン　自由部門の本選に出場してきました。 自分のチームは、C言語以外の経験がほとんどない3人チームで、制作期間も3か月しかありませんでした。 そのときに採用してよかった技術や、やってよかったことを紹介します。
+Git/GitHub メンバー全員がGit/GitHubの使用経験がなく、開発初期はDiscordに.dartファイルを貼り付けて共有していました。 しかし、管理するファイルが増えすぐに苦しくなったのでGit/GitHubを用いたバージョン管理を導入しました。
+導入には苦労するかと思いきや、案外1週間かからずに導入できました。 開発終了後も個人開発のプロジェクトでGit/GitHubを活用でき、プロジェクトの管理が以前より楽になったので この機会に導入して本当によかったと思っています。
+Discordにpushの通知を送る Git/GitHubを導入した後、webhookで開発チームのDiscordサーバーにpushの通知を送るように しました。やる気が出ない期間でも、他のメンバーのpush通知をみて自分もやらなきゃと 焦ることができたり、同様に他のメンバーにも焦ってもらえたので、 開発のモチベーション維持に非常に役立ちました。
+Flutter/Dart アプリケーションの制作にはFlutter/Dartを採用しました。 FlutterはGoogleが開発しているクロスプラットフォームのモバイルアプリ開発フレームワークです。 テーマが確定する前からFlutterの学習を始めたので最悪テーマが変更になっても流用できる技術がいいなと思い、Flutterを採用しました。
+Flutterを採用して良かったこととして、以下の点が挙げられます。
+日本語でも情報が多く、学習しやすい 標準でMaterial Designに準拠しているので自分でデザインを考える必要がない 簡単にiOSとAndroidの両方に対応できた GUIのプログラミングがたのしい はじめてのオブジェクト指向に苦労しましたが、Flutter/Dartが比較的流行っている(気がする)ので 情報が多く、学習しやすかったのは非常に助かりました。
+また、これまでにさほどプログラミングに関心のなかった開発メンバーがGUIのプログラミングにはじめて触れ、 その楽しさを知り、アプリケーションエンジニアを目指すようになりました。 自分が直接何かをしたわけではありませんが、素直に嬉しかったです。
+Material Design 3 アプリケーションのデザインには、Material Design 3を採用しました。 開発期間にまったく余裕が無かったので既存のデザイン言語を利用でき、1から考える必要がない点は大きなメリットでした。
+開発を始めた時点ではFlutterのデフォルトはMaterial Design 2でしたが、 Material Design 3のほうが好みだったのでMaterial Design 3を採用してみました。 情報が少なく苦労しましたが、会場で「市販されているアプリみたい」などと、 デザインを褒めていただける機会が多く、採用した甲斐があったと思っています。
+まとめ 以上、高専プロコンで採用してよかった技術/やってよかったことを紹介しました。 アプリ開発にハマるきっかけになってもらったり、これまで自分の作ったものを評価してもらう機会のなかった メンバーに機会を与えられたり、高専プロコンそのものも出場してよかったと思います。
+ありがとうございました。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-12-24 00:00:00 +0900 JST'>December 24, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to 高専プロコンで採用してよかった技術・やってよかったこと" href="http://localhost:1313/blog/post/kosen_procon34_goodpoint/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/blog/images/reel_2024.gif" alt="">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Reel 2024
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>こんにちは。ちょこみんとです。2023年ももう終わってしまいますね。 2023年に作った中でもお気に入りの作品たちをここにまとめておきます。
+プログラミング @MomentEffect.anm AviUtlで利用可能なLuaスクリプトです。50行にも満たないスクリプトですが、かゆいところにてが届くスクリプトだったようでTwitterで200いいねをいただきました。うれしい。
+GitHubからダウンロードできます。
+ColorLens 全国高等専門学校プログラミングコンテスト 第34回福井大会（2023）本選出場作品です。 Flutterを使用し、制作しました。
+ColorChat ChatGPT APIを利用し、自然言語から配色を生成するソフトウェアです。 モデルやリクエストパラメータを自由に設定できる高いカスタマイズ性を備えています。
+BOOTHで販売しています。
+映像 電算機部文字アニメ 学園祭前日になにか展示したいな～と思い、3時間ほどで作った文字アニメです。 かわいくできてお気に入りです。
+エラーコード 二次創作PV エラーコードの二次創作PVです。
+はじめて映像に触れてから長い事たちますが、この作品でようやくキネポのコツを掴めた気がします。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-12-22 22:10:25 +0900 JST'>December 22, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Reel 2024" href="http://localhost:1313/blog/post/reel_2024/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">ブログを作りました
     </h2>
   </header>
@@ -167,12 +247,13 @@
 参考文献 HugoとGitHub Pagesを使ったお手軽サイト構築 Hugo と Github Pages でブログを作る </p>
   </div>
   <footer class="entry-footer"><span title='2023-10-20 17:44:48 +0900 JST'>October 20, 2023</span></footer>
-  <a class="entry-link" aria-label="post link to ブログを作りました" href="http://cmt1910.github.io/blog/post/create-blog/"></a>
+  <a class="entry-link" aria-label="post link to ブログを作りました" href="http://localhost:1313/blog/post/create-blog/"></a>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="http://cmt1910.github.io/blog">ちょこみんとの雑記帳</a></span>
+        <span>&copy; 2025 <a href="http://localhost:1313/blog/">ちょこみんとの雑記帳</a></span> · 
+
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
@@ -186,9 +267,14 @@
 </a>
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -229,11 +315,12 @@
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })

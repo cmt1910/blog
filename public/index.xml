@@ -1,21 +1,185 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ちょこみんとの雑記帳</title>
-    <link>http://cmt1910.github.io/blog/</link>
+    <link>http://localhost:1313/blog/</link>
     <description>Recent content on ちょこみんとの雑記帳</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.152.2</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 20 Oct 2023 17:44:48 +0900</lastBuildDate>
-    <atom:link href="http://cmt1910.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Dec 2025 16:09:56 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ターミナルとかCLIツールをいい感じにした</title>
+      <link>http://localhost:1313/blog/post/improve-cli-and-terminal/</link>
+      <pubDate>Sat, 06 Dec 2025 16:09:56 +0900</pubDate>
+      <guid>http://localhost:1313/blog/post/improve-cli-and-terminal/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;fastfech result&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/blog/images/fastfech_20251206.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2年ぶりにこんにちは。ちょこみんとです。&lt;/p&gt;
+&lt;p&gt;最近はターミナルから利用するAI Agentが流行りです。おかげで近頃ターミナルを利用する時間が増え、
+適当にやっていたターミナルとCLIツールをいい感じに整備したいな～と思うようになりました。
+というわけで、いい感じに整備した記録を忘れないように書いておきます。&lt;/p&gt;
+&lt;p&gt;※最近はmacで開発を行っているので記事の内容はmacOS向けです。&lt;/p&gt;
+&lt;h2 id=&#34;開発ツールの管理をmiseに移行した&#34;&gt;開発ツールの管理をmiseに移行した&lt;/h2&gt;
+&lt;p&gt;これまでFlutterのバージョン管理はfvm、Node.jsはnvmを利用してバージョン管理をしていました。
+使う言語やツールが増えるたびにバージョン管理ツールも増えるのがめんどくさいよ～と思っていたところに&lt;a href=&#34;https://mise.jdx.dev/&#34;&gt;mise&lt;/a&gt;(ミーズ)というツールがあることを知りました。
+miseを利用することで、言語のバージョン管理、環境変数の管理、タスクランナー3役をmiseのみで完結させることが出来ます。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;fvm、nvmなどを介さずにasdf（あるいはnvmやpyenvなど、ただしあらゆるプログラミング言語に対応）と同様に、
+node.js、Python、CMake、Terraformなどの開発ツールや、数百種類にも及ぶその他のツールを管理します。&lt;/li&gt;
+&lt;li&gt;direnvと同様に、異なるプロジェクトディレクトリごとに環境変数を管理します。&lt;/li&gt;
+&lt;li&gt;makeと同様に、プロジェクトのビルドやテストに使用するタスクを管理します。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(&lt;a href=&#34;https://github.com/jdx/mise&#34;&gt;miseのREADMEより&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;というわけで、fvmとnvmをアンインストールして全部miseでバージョン管理するようにしました。&lt;/p&gt;
+&lt;h2 id=&#34;ターミナルをghosttyにした&#34;&gt;ターミナルをGhosttyにした&lt;/h2&gt;
+&lt;p&gt;これがそもそもの開発環境を整備しようとした一番の原因になります。
+いままでターミナルは&lt;a href=&#34;https://www.warp.dev/&#34;&gt;Warp&lt;/a&gt;を利用していましたが、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Codex CLIで変換を確定した際にプロンプトが送信されてしまう&lt;/li&gt;
+&lt;li&gt;気がついたらWarpにいろんな機能が増えてIDEみたいになってしまった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ということがあり、ターミナルを変えることにしました。
+候補としては&lt;a href=&#34;https://alacritty.org/&#34;&gt;Alacritty&lt;/a&gt;や&lt;a href=&#34;https://wezterm.org/index.html&#34;&gt;WezTerm&lt;/a&gt;などがあったのですが、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;プラットフォームのネイティブのUI&lt;/li&gt;
+&lt;li&gt;Unicodeまわりの対応を頑張っているらしい&lt;/li&gt;
+&lt;li&gt;なんか新しくてよさそう
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://x.com/mitchellh/status/1985424124152594813?s=20&#34;&gt;Mitchell Hashimoto氏のポスト&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;という3点でWarpからGhosttyに移行することにしました。
+WarpとmacOS標準のターミナル以外を使ったことがないのでぶっちゃけ違いはわかりませんが、GhosttyではIME周りの問題が発生していないのでいい感じな気がしています。&lt;/p&gt;
+&lt;h2 id=&#34;zshrcを整備した&#34;&gt;.zshrcを整備した&lt;/h2&gt;
+&lt;p&gt;上に書いたように、ターミナルはこれまでWarpを利用していたのですがWarpは設定しなくても色々よしなにやってくれることがウリでした。
+しかし、Ghosttyに移行したことで設定や挙動のカスタマイズは自分でやる必要があります。
+これを機に、雰囲気で書きすぎていて設定が意味不明だった.zshrcをちゃんと書くことにしました。
+具体的には、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;プラグインを&lt;a href=&#34;https://github.com/rossmacarthur/sheldon&#34;&gt;sheldon&lt;/a&gt;で管理するようにする&lt;/li&gt;
+&lt;li&gt;プラグインを入れる
+&lt;ul&gt;
+&lt;li&gt;romkatv/powerlevel10k&lt;/li&gt;
+&lt;li&gt;zdharma-continuum/fast-syntax-highlighting&lt;/li&gt;
+&lt;li&gt;zsh-users/zsh-autosuggestions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;補完や履歴の設定をちゃんと書く&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ということをやりました。
+詳しい設定は後に書く&lt;a href=&#34;https://github.com/cmt1910/dotfiles/tree/main&#34;&gt;dotfilesのリポジトリ&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;h2 id=&#34;dotfilesを始めた&#34;&gt;dotfilesを始めた&lt;/h2&gt;
+&lt;p&gt;これまでCLIツールの設定ファイルがどこに格納されているか設定を変更するたびにドキュメントをみて探していたのですが、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;これでは流石に効率が悪すぎる&lt;/li&gt;
+&lt;li&gt;会社のPCでも同じ設定を使いたい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;という思いがあり、重い腰を上げてdotfilesで各種設定ファイルを書くことにしました。
+dotfilesの管理には&lt;a href=&#34;https://www.chezmoi.io/&#34;&gt;chezmoi&lt;/a&gt;を利用しています。
+詳しい設定は&lt;a href=&#34;https://github.com/cmt1910/dotfiles/tree/main&#34;&gt;dotfilesのリポジトリ&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;h2 id=&#34;成果&#34;&gt;成果&lt;/h2&gt;
+&lt;p&gt;というわけでターミナルとかCLIツールをいい感じに整備したわけですが、整備した甲斐あってこれまで雰囲気で書いていた設定の意味を理解できるようになったり、
+入れるだけ入れて眠っていたCLIツールを活用できるようになったりと色々いいことがあったのでやってよかったな～と思います。
+気が向いたら.zshrcとdotfilesについても詳しく記事を書こうと思います。気が向いたら。&lt;/p&gt;
+&lt;p&gt;ではまたいつか会いましょう。ちょこみんとでした。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>高専プロコンで採用してよかった技術・やってよかったこと</title>
+      <link>http://localhost:1313/blog/post/kosen_procon34_goodpoint/</link>
+      <pubDate>Sun, 24 Dec 2023 00:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/post/kosen_procon34_goodpoint/</guid>
+      <description>&lt;p&gt;この記事は&lt;a href=&#34;https://adventar.org/calendars/8652&#34;&gt;みすてむず いず みすきーしすてむず (4) Advent Calendar 2023&lt;/a&gt; 24日目の記事です。&lt;/p&gt;
+&lt;p&gt;こんにちは。ちょこみんとです。10月に第34回高専プロコン　自由部門の本選に出場してきました。
+自分のチームは、C言語以外の経験がほとんどない3人チームで、制作期間も3か月しかありませんでした。
+そのときに採用してよかった技術や、やってよかったことを紹介します。&lt;/p&gt;
+&lt;h2 id=&#34;gitgithub&#34;&gt;Git/GitHub&lt;/h2&gt;
+&lt;p&gt;メンバー全員がGit/GitHubの使用経験がなく、開発初期はDiscordに.dartファイルを貼り付けて共有していました。
+しかし、管理するファイルが増えすぐに苦しくなったのでGit/GitHubを用いたバージョン管理を導入しました。&lt;/p&gt;
+&lt;p&gt;導入には苦労するかと思いきや、案外1週間かからずに導入できました。
+開発終了後も個人開発のプロジェクトでGit/GitHubを活用でき、プロジェクトの管理が以前より楽になったので
+この機会に導入して本当によかったと思っています。&lt;/p&gt;
+&lt;h2 id=&#34;discordにpushの通知を送る&#34;&gt;Discordにpushの通知を送る&lt;/h2&gt;
+&lt;p&gt;Git/GitHubを導入した後、webhookで開発チームのDiscordサーバーにpushの通知を送るように
+しました。やる気が出ない期間でも、他のメンバーのpush通知をみて自分もやらなきゃと
+焦ることができたり、同様に他のメンバーにも焦ってもらえたので、
+開発のモチベーション維持に非常に役立ちました。&lt;/p&gt;
+&lt;h2 id=&#34;flutterdart&#34;&gt;Flutter/Dart&lt;/h2&gt;
+&lt;p&gt;アプリケーションの制作にはFlutter/Dartを採用しました。
+&lt;a href=&#34;https://flutter.dev/&#34;&gt;Flutter&lt;/a&gt;はGoogleが開発しているクロスプラットフォームのモバイルアプリ開発フレームワークです。
+テーマが確定する前からFlutterの学習を始めたので最悪テーマが変更になっても流用できる技術がいいなと思い、Flutterを採用しました。&lt;/p&gt;
+&lt;p&gt;Flutterを採用して良かったこととして、以下の点が挙げられます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;日本語でも情報が多く、学習しやすい&lt;/li&gt;
+&lt;li&gt;標準でMaterial Designに準拠しているので自分でデザインを考える必要がない&lt;/li&gt;
+&lt;li&gt;簡単にiOSとAndroidの両方に対応できた&lt;/li&gt;
+&lt;li&gt;GUIのプログラミングがたのしい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;はじめてのオブジェクト指向に苦労しましたが、Flutter/Dartが比較的流行っている(気がする)ので
+情報が多く、学習しやすかったのは非常に助かりました。&lt;/p&gt;
+&lt;p&gt;また、これまでにさほどプログラミングに関心のなかった開発メンバーがGUIのプログラミングにはじめて触れ、
+その楽しさを知り、アプリケーションエンジニアを目指すようになりました。
+自分が直接何かをしたわけではありませんが、素直に嬉しかったです。&lt;/p&gt;
+&lt;h2 id=&#34;material-design-3&#34;&gt;Material Design 3&lt;/h2&gt;
+&lt;p&gt;アプリケーションのデザインには、&lt;a href=&#34;https://material.io/design&#34;&gt;Material Design 3&lt;/a&gt;を採用しました。
+開発期間にまったく余裕が無かったので既存のデザイン言語を利用でき、1から考える必要がない点は大きなメリットでした。&lt;/p&gt;
+&lt;p&gt;開発を始めた時点ではFlutterのデフォルトはMaterial Design 2でしたが、
+Material Design 3のほうが好みだったのでMaterial Design 3を採用してみました。
+情報が少なく苦労しましたが、会場で「市販されているアプリみたい」などと、
+デザインを褒めていただける機会が多く、採用した甲斐があったと思っています。&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;以上、高専プロコンで採用してよかった技術/やってよかったことを紹介しました。
+アプリ開発にハマるきっかけになってもらったり、これまで自分の作ったものを評価してもらう機会のなかった
+メンバーに機会を与えられたり、高専プロコンそのものも出場してよかったと思います。&lt;/p&gt;
+&lt;p&gt;ありがとうございました。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reel 2024</title>
+      <link>http://localhost:1313/blog/post/reel_2024/</link>
+      <pubDate>Fri, 22 Dec 2023 22:10:25 +0900</pubDate>
+      <guid>http://localhost:1313/blog/post/reel_2024/</guid>
+      <description>&lt;p&gt;こんにちは。ちょこみんとです。2023年ももう終わってしまいますね。
+2023年に作った中でもお気に入りの作品たちをここにまとめておきます。&lt;/p&gt;
+&lt;h2 id=&#34;プログラミング&#34;&gt;プログラミング&lt;/h2&gt;
+&lt;h3 id=&#34;momenteffectanm&#34;&gt;@MomentEffect.anm&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;電算機部文字アニメ&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/blog/images/moment_effect.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;AviUtlで利用可能なLuaスクリプトです。50行にも満たないスクリプトですが、かゆいところにてが届くスクリプトだったようでTwitterで200いいねをいただきました。うれしい。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/cmt1910/MomentEffect&#34;&gt;GitHub&lt;/a&gt;からダウンロードできます。&lt;/p&gt;
+&lt;h3 id=&#34;colorlens&#34;&gt;ColorLens&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;エラーコード 二次創作PV&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/blog/images/colorlens_textlogo.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;全国高等専門学校プログラミングコンテスト 第34回福井大会（2023）本選出場作品です。
+Flutterを使用し、制作しました。&lt;/p&gt;
+&lt;h3 id=&#34;colorchat&#34;&gt;ColorChat&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;ColorChat&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/blog/images/colorchat_thumbnail.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;ChatGPT APIを利用し、自然言語から配色を生成するソフトウェアです。
+モデルやリクエストパラメータを自由に設定できる高いカスタマイズ性を備えています。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://booth.pm/ja/items/5290308&#34;&gt;BOOTH&lt;/a&gt;で販売しています。&lt;/p&gt;
+&lt;h2 id=&#34;映像&#34;&gt;映像&lt;/h2&gt;
+&lt;h3 id=&#34;電算機部文字アニメ&#34;&gt;電算機部文字アニメ&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;電算機部文字アニメ&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/blog/images/densan_anime.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;学園祭前日になにか展示したいな～と思い、3時間ほどで作った文字アニメです。
+かわいくできてお気に入りです。&lt;/p&gt;
+&lt;h3 id=&#34;エラーコード-二次創作pv&#34;&gt;エラーコード 二次創作PV&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;エラーコード 二次創作PV&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/blog/images/errorcode.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/Ohxod1nuqvA&#34;&gt;エラーコード&lt;/a&gt;の二次創作PVです。&lt;/p&gt;
+&lt;p&gt;はじめて映像に触れてから長い事たちますが、この作品でようやくキネポのコツを掴めた気がします。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>ブログを作りました</title>
-      <link>http://cmt1910.github.io/blog/post/create-blog/</link>
+      <link>http://localhost:1313/blog/post/create-blog/</link>
       <pubDate>Fri, 20 Oct 2023 17:44:48 +0900</pubDate>
-      <guid>http://cmt1910.github.io/blog/post/create-blog/</guid>
-      <description>HugoとGitHub Pagesでブログを作りました。 markdownファイルをpushするとGitHub Actionsで自動でデプロイされるようになっています。
-適当に色々書いてく予定です。 よろしくお願いします。
-参考文献 HugoとGitHub Pagesを使ったお手軽サイト構築 Hugo と Github Pages でブログを作る </description>
+      <guid>http://localhost:1313/blog/post/create-blog/</guid>
+      <description>&lt;p&gt;HugoとGitHub Pagesでブログを作りました。
+markdownファイルをpushするとGitHub Actionsで自動でデプロイされるようになっています。&lt;/p&gt;
+&lt;p&gt;適当に色々書いてく予定です。
+よろしくお願いします。&lt;/p&gt;
+&lt;h2 id=&#34;参考文献&#34;&gt;参考文献&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://koyomiji.com/log/72&#34;&gt;HugoとGitHub Pagesを使ったお手軽サイト構築&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sat8bit.github.io/posts/hugo-with-github-pages/&#34;&gt;Hugo と Github Pages でブログを作る&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>
