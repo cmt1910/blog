@@ -42,8 +42,8 @@ miseを利用することで、言語のバージョン管理、環境変数の�
 
 - プラットフォームのネイティブのUI
 - Unicodeまわりの対応を頑張っているらしい
-- なんか新しくてよさそう
   - [Mitchell Hashimoto氏のポスト](https://x.com/mitchellh/status/1985424124152594813?s=20)
+- なんか新しくてよさそう
 
 という3点でWarpからGhosttyに移行することにしました。
 WarpとmacOS標準のターミナル以外を使ったことがないのでぶっちゃけ違いはわかりませんが、GhosttyではIME周りの問題が発生していないのでいい感じな気がしています。
@@ -57,9 +57,9 @@ WarpとmacOS標準のターミナル以外を使ったことがないのでぶ�
 
 - プラグインを[sheldon](https://github.com/rossmacarthur/sheldon)で管理するようにする
 - プラグインを入れる
-  - romkatv/powerlevel10k
-  - zdharma-continuum/fast-syntax-highlighting
-  - zsh-users/zsh-autosuggestions
+  - `romkatv/powerlevel10k`
+  - `zdharma-continuum/fast-syntax-highlighting`
+  - `zsh-users/zsh-autosuggestions`
 - 補完や履歴の設定をちゃんと書く
 
 ということをやりました。
