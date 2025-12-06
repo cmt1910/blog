@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>ちょこみんとの雑記帳</title><link>https://cmt1910.github.io/blog/</link><description>Recent content on ちょこみんとの雑記帳</description><generator>Hugo -- 0.152.2</generator><language>ja</language><lastBuildDate>Sun, 24 Dec 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://cmt1910.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>高専プロコンで採用してよかった技術・やってよかったこと</title><link>https://cmt1910.github.io/blog/post/kosen_procon34_goodpoint/</link><pubDate>Sun, 24 Dec 2023 00:00:00 +0900</pubDate><guid>https://cmt1910.github.io/blog/post/kosen_procon34_goodpoint/</guid><description>&lt;p&gt;この記事は&lt;a href="https://adventar.org/calendars/8652"&gt;みすてむず いず みすきーしすてむず (4) Advent Calendar 2023&lt;/a&gt; 24日目の記事です。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>ちょこみんとの雑記帳</title><link>https://cmt1910.github.io/blog/</link><description>Recent content on ちょこみんとの雑記帳</description><generator>Hugo -- 0.152.2</generator><language>ja</language><lastBuildDate>Sat, 06 Dec 2025 16:09:56 +0900</lastBuildDate><atom:link href="https://cmt1910.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>ターミナルとかCLIツールをいい感じにした</title><link>https://cmt1910.github.io/blog/post/improve-cli-and-terminal/</link><pubDate>Sat, 06 Dec 2025 16:09:56 +0900</pubDate><guid>https://cmt1910.github.io/blog/post/improve-cli-and-terminal/</guid><description>&lt;p&gt;&lt;img alt="fastfech result" loading="lazy" src="https://cmt1910.github.io/blog/images/fastfech_20251206.png"&gt;&lt;/p&gt;
+&lt;p&gt;2年ぶりにこんにちは。ちょこみんとです。&lt;/p&gt;
+&lt;p&gt;最近はターミナルから利用するAI Agentが流行りです。おかげで近頃ターミナルを利用する時間が増え、
+適当にやっていたターミナルとCLIツールをいい感じに整備したいな～と思うようになりました。
+というわけで、いい感じに整備した記録を忘れないように書いておきます。&lt;/p&gt;
+&lt;p&gt;※最近はmacで開発を行っているので記事の内容はmacOS向けです。&lt;/p&gt;
+&lt;h2 id="開発ツールの管理をmiseに移行した"&gt;開発ツールの管理をmiseに移行した&lt;/h2&gt;
+&lt;p&gt;これまでFlutterのバージョン管理はfvm、Node.jsはnvmを利用してバージョン管理をしていました。
+使う言語やツールが増えるたびにバージョン管理ツールも増えるのがめんどくさいよ～と思っていたところに&lt;a href="https://mise.jdx.dev/"&gt;mise&lt;/a&gt;(ミーズ)というツールがあることを知りました。
+miseを利用することで、言語のバージョン管理、環境変数の管理、タスクランナー3役をmiseのみで完結させることが出来ます。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;fvm、nvmなどを介さずにasdf（あるいはnvmやpyenvなど、ただしあらゆるプログラミング言語に対応）と同様に、
+node.js、Python、CMake、Terraformなどの開発ツールや、数百種類にも及ぶその他のツールを管理します。&lt;/li&gt;
+&lt;li&gt;direnvと同様に、異なるプロジェクトディレクトリごとに環境変数を管理します。&lt;/li&gt;
+&lt;li&gt;makeと同様に、プロジェクトのビルドやテストに使用するタスクを管理します。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(&lt;a href="https://github.com/jdx/mise"&gt;miseのREADMEより&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;というわけで、fvmとnvmをアンインストールして全部miseでバージョン管理するようにしました。&lt;/p&gt;
+&lt;h2 id="ターミナルをghosttyにした"&gt;ターミナルをGhosttyにした&lt;/h2&gt;
+&lt;p&gt;これがそもそもの開発環境を整備しようとした一番の原因になります。
+いままでターミナルは&lt;a href="https://www.warp.dev/"&gt;Warp&lt;/a&gt;を利用していましたが、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Codex CLIで変換を確定した際にプロンプトが送信されてしまう&lt;/li&gt;
+&lt;li&gt;気がついたらWarpにいろんな機能が増えてIDEみたいになってしまった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ということがあり、ターミナルを変えることにしました。
+候補としては&lt;a href="https://alacritty.org/"&gt;Alacritty&lt;/a&gt;や&lt;a href="https://wezterm.org/index.html"&gt;WezTerm&lt;/a&gt;などがあったのですが、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;プラットフォームのネイティブのUI&lt;/li&gt;
+&lt;li&gt;Unicodeまわりの対応を頑張っているらしい&lt;/li&gt;
+&lt;li&gt;なんか新しくてよさそう
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://x.com/mitchellh/status/1985424124152594813?s=20"&gt;Mitchell Hashimoto氏のポスト&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;という3点でWarpからGhosttyに移行することにしました。
+WarpとmacOS標準のターミナル以外を使ったことがないのでぶっちゃけ違いはわかりませんが、GhosttyではIME周りの問題が発生していないのでいい感じな気がしています。&lt;/p&gt;
+&lt;h2 id="zshrcを整備した"&gt;.zshrcを整備した&lt;/h2&gt;
+&lt;p&gt;上に書いたように、ターミナルはこれまでWarpを利用していたのですがWarpは設定しなくても色々よしなにやってくれることがウリでした。
+しかし、Ghosttyに移行したことで設定や挙動のカスタマイズは自分でやる必要があります。
+これを機に、雰囲気で書きすぎていて設定が意味不明だった.zshrcをちゃんと書くことにしました。
+具体的には、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;プラグインを&lt;a href="https://github.com/rossmacarthur/sheldon"&gt;sheldon&lt;/a&gt;で管理するようにする&lt;/li&gt;
+&lt;li&gt;プラグインを入れる
+&lt;ul&gt;
+&lt;li&gt;romkatv/powerlevel10k&lt;/li&gt;
+&lt;li&gt;zdharma-continuum/fast-syntax-highlighting&lt;/li&gt;
+&lt;li&gt;zsh-users/zsh-autosuggestions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;補完や履歴の設定をちゃんと書く&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ということをやりました。
+詳しい設定は後に書く&lt;a href="https://github.com/cmt1910/dotfiles/tree/main"&gt;dotfilesのリポジトリ&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;h2 id="dotfilesを始めた"&gt;dotfilesを始めた&lt;/h2&gt;
+&lt;p&gt;これまでCLIツールの設定ファイルがどこに格納されているか設定を変更するたびにドキュメントをみて探していたのですが、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;これでは流石に効率が悪すぎる&lt;/li&gt;
+&lt;li&gt;会社のPCでも同じ設定を使いたい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;という思いがあり、重い腰を上げてdotfilesで各種設定ファイルを書くことにしました。
+dotfilesの管理には&lt;a href="https://www.chezmoi.io/"&gt;chezmoi&lt;/a&gt;を利用しています。
+詳しい設定は&lt;a href="https://github.com/cmt1910/dotfiles/tree/main"&gt;dotfilesのリポジトリ&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;h2 id="成果"&gt;成果&lt;/h2&gt;
+&lt;p&gt;というわけでターミナルとかCLIツールをいい感じに整備したわけですが、整備した甲斐あってこれまで雰囲気で書いていた設定の意味を理解できるようになったり、
+入れるだけ入れて眠っていたCLIツールを活用できるようになったりと色々いいことがあったのでやってよかったな～と思います。
+気が向いたら.zshrcとdotfilesについても詳しく記事を書こうと思います。気が向いたら。&lt;/p&gt;
+&lt;p&gt;ではまたいつか会いましょう。ちょこみんとでした。&lt;/p&gt;</description></item><item><title>高専プロコンで採用してよかった技術・やってよかったこと</title><link>https://cmt1910.github.io/blog/post/kosen_procon34_goodpoint/</link><pubDate>Sun, 24 Dec 2023 00:00:00 +0900</pubDate><guid>https://cmt1910.github.io/blog/post/kosen_procon34_goodpoint/</guid><description>&lt;p&gt;この記事は&lt;a href="https://adventar.org/calendars/8652"&gt;みすてむず いず みすきーしすてむず (4) Advent Calendar 2023&lt;/a&gt; 24日目の記事です。&lt;/p&gt;
 &lt;p&gt;こんにちは。ちょこみんとです。10月に第34回高専プロコン　自由部門の本選に出場してきました。
 自分のチームは、C言語以外の経験がほとんどない3人チームで、制作期間も3か月しかありませんでした。
 そのときに採用してよかった技術や、やってよかったことを紹介します。&lt;/p&gt;
