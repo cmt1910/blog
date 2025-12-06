@@ -28,12 +28,12 @@ node.js、Python、CMake、Terraformなどの開発ツールや、数百種類�
 候補としては&lt;a href="https://alacritty.org/"&gt;Alacritty&lt;/a&gt;や&lt;a href="https://wezterm.org/index.html"&gt;WezTerm&lt;/a&gt;などがあったのですが、&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;プラットフォームのネイティブのUI&lt;/li&gt;
-&lt;li&gt;Unicodeまわりの対応を頑張っているらしい&lt;/li&gt;
-&lt;li&gt;なんか新しくてよさそう
+&lt;li&gt;Unicodeまわりの対応を頑張っているらしい
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://x.com/mitchellh/status/1985424124152594813?s=20"&gt;Mitchell Hashimoto氏のポスト&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;なんか新しくてよさそう&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;という3点でWarpからGhosttyに移行することにしました。
 WarpとmacOS標準のターミナル以外を使ったことがないのでぶっちゃけ違いはわかりませんが、GhosttyではIME周りの問題が発生していないのでいい感じな気がしています。&lt;/p&gt;
@@ -46,9 +46,9 @@ WarpとmacOS標準のターミナル以外を使ったことがないのでぶ�
 &lt;li&gt;プラグインを&lt;a href="https://github.com/rossmacarthur/sheldon"&gt;sheldon&lt;/a&gt;で管理するようにする&lt;/li&gt;
 &lt;li&gt;プラグインを入れる
 &lt;ul&gt;
-&lt;li&gt;romkatv/powerlevel10k&lt;/li&gt;
-&lt;li&gt;zdharma-continuum/fast-syntax-highlighting&lt;/li&gt;
-&lt;li&gt;zsh-users/zsh-autosuggestions&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;romkatv/powerlevel10k&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;zdharma-continuum/fast-syntax-highlighting&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;zsh-users/zsh-autosuggestions&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;補完や履歴の設定をちゃんと書く&lt;/li&gt;
