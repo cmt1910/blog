@@ -13,8 +13,7 @@
       <link>http://localhost:1313/blog/post/improve-cli-and-terminal/</link>
       <pubDate>Sat, 06 Dec 2025 16:09:56 +0900</pubDate>
       <guid>http://localhost:1313/blog/post/improve-cli-and-terminal/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;fastfech result&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/blog/images/fastfech_20251206.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;2年ぶりにこんにちは。ちょこみんとです。&lt;/p&gt;
+      <description>&lt;p&gt;2年ぶりにこんにちは。ちょこみんとです。&lt;/p&gt;
 &lt;p&gt;最近はターミナルから利用するAI Agentが流行りです。おかげで近頃ターミナルを利用する時間が増え、
 適当にやっていたターミナルとCLIツールをいい感じに整備したいな～と思うようになりました。
 というわけで、いい感じに整備した記録を忘れないように書いておきます。&lt;/p&gt;

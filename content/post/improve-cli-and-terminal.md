@@ -2,9 +2,9 @@
 title = 'ターミナルとかCLIツールをいい感じにした'
 date = 2025-12-06T16:09:56+09:00
 draft = false
+[cover]
+image = '/blog/images/fastfech_20251206.webp'
 +++
-
-![fastfech result](/blog/images/fastfech_20251206.png)
 
 2年ぶりにこんにちは。ちょこみんとです。
 
